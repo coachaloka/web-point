@@ -29,7 +29,7 @@ const Login = () => {
       console.log(currentUser);
       
       // get jwt 
-      fetch('https://web-developer-server-five.vercel.app/jwt',{
+      fetch('http://localhost:5000/jwt',{
         method: 'POST',
         headers:{
           'content-type': 'application/json'

@@ -3,9 +3,10 @@ import Blog from "../Pages/Blog/Blog";
 import Checkout from "../Pages/Checkout/Checkout";
 import Error from "../Pages/Error/Error";
 import Home from "../Pages/Home/Home";
-import AddServices from "../Pages/Home/Services/AddServices";
-import AllServices from "../Pages/Home/Services/AllServices";
-import ServiceDetails from "../Pages/Home/Services/ServiceDetails";
+// import AddServices from "../Pages/Home/Services/AddServices";
+import AddServices from '../Pages/Home/Servicess/AddServices'
+import AllServices from "../Pages/Home/Servicess/AllServices";
+import ServiceDetails from "../Pages/Home/Servicess/ServiceDetails";
 import Login from "../Pages/Login/Login";
 import Orders from "../Pages/Orders/Reviews";
 import Signup from "../Pages/Signup/Signup";
@@ -37,22 +38,22 @@ const router = createBrowserRouter([
                 element: <PrivateRoute>
                     <AddServices />
                 </PrivateRoute>,
-                loader: ()=>fetch('https://web-developer-server-five.vercel.app/services')
+                loader: ()=>fetch('http://localhost:5000/services')
             },
             {
                 path: 'checkout/:id',
                 element: <PrivateRoute><Checkout /></PrivateRoute>,
-                loader: ({params})=>fetch(`https://web-developer-server-five.vercel.app/services/${params.id}`)
+                loader: ({params})=>fetch(`http://localhost:5000/services/${params.id}`)
             },
             {
                 path: 'serviceDetails/:id',
                 element: <ServiceDetails />,
-                loader: ({params})=>fetch(`https://web-developer-server-five.vercel.app/services/${params.id}`)
+                loader: ({params})=>fetch(`http://localhost:5000/services/${params.id}`)
             },
             {
                 path: 'allServices',
                 element: <AllServices />
-                // loader: ({params})=>fetch(`https://web-developer-server-five.vercel.app/services/${params.id}`)
+                // loader: ({params})=>fetch(`http://localhost:5000/services/${params.id}`)
             },
             {
                 path: 'reviews',
@@ -61,7 +62,7 @@ const router = createBrowserRouter([
             {
                 path: 'blogs',
                 element:<Blog />
-                // loader: ()=>fetch('https://web-developer-server-five.vercel.app/blogs')
+                // loader: ()=>fetch('http://localhost:5000/blogs')
             }
         ]
     },

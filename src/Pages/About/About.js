@@ -19,9 +19,9 @@ const About = () => {
         </div>
         <div className="w-1/2 mx-5">
             <h6 className="font-bold text-orange-700">About Me!</h6>
-          <h1 className="text-5xl font-bold">Web Designer!</h1>
+          <h1 className="text-5xl font-bold">Creator!</h1>
           <p className="py-6">
-            I am delighted and blessed to being a business partner with You. As you know, I have vast knowledge and experience in making the website more trafficed and visited!. Contemporary modern techlogy i used to make your websites more effecinet and Unique. 
+            I am delighted to being a business partner with You. As you know, I have vast knowledge and experience in making the website more trafficed and visited!. Contemporary modern techlogy i used to make your websites more effecinet and Unique. 
           </p>
           <button className="btn btn-primary bg-orange">Get More Info!</button>
         </div>

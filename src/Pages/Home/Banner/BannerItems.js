@@ -1,5 +1,5 @@
 import React from "react";
-import './BannerIntems.css';
+// import './BannerIntems.css';
 const BannerItems = ({slide}) => {
     const {image, id, prev, next}= slide;
   return (

@@ -6,7 +6,7 @@ const OrdersRaw = ({ order, handleDelete, handleStatusUpdate }) => {
   // loade service data from servides fo show images
   const [orderServices, setOrderServices] = useState({});
   useEffect(() => {
-    fetch(`https://web-developer-server-five.vercel.app/services/${service}`)
+    fetch(`http://localhost:5000/services/${service}`)
       .then((res) => res.json())
       .then((data) => setOrderServices(data));
   }, [service]);

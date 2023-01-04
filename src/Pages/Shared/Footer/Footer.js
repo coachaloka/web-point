@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../../../assets2/logo-4.png';
+import logo from '../../../assets2/logo-3.png';
 
 const Footer = () => {
     return (
@@ -7,7 +7,7 @@ const Footer = () => {
             <footer className="footer p-20 bg-base-200 text-orange-900 text-1xl m-5">
   <div>
     <img src={logo} alt="img" />
-    <p>Bachna Kubi.<br />All Right Reserved | 2022.</p>
+    <p>Alaka Rani<br />All Right Reserved | 2022.</p>
   </div> 
   <div>
     <span className="footer-title">Services</span> 

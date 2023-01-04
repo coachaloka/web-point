@@ -8,13 +8,13 @@ const Contact = () => {
         <div className="max-w-md">
           <h1 className="text-5xl font-bold">Contact Address</h1>
           <p className="py-2 font-bold">
-            Phone: 
+            Phone: 123456789
           </p>
           <p className="py-2 font-bold">
-            Email: 
+            Email: alaka@gmail.com
           </p>
           <p className="py-2 font-bold">
-            Birisiri, Durgapur, Netrakona.
+            Dhaka, Bangladesh.
           </p>
           <Link to='/allServices'><button className="btn btn-primary">Our Services</button></Link>
         </div>

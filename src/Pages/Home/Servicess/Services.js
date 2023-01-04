@@ -2,12 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import useTitle from '../../../Hook/Hook';
 import ServicesCard from './ServicesCard';
+// import ServicesCard from './ServicesCard';
 
 const Services = () => {
-    useTitle('Design Book')
+    useTitle('Web Point')
     const [services, setServices]=useState([]);
     useEffect(()=>{
-        fetch('https://web-developer-server-five.vercel.app/services')
+        fetch('http://localhost:5000/services')
         .then(res=>res.json())
         .then(data=>setServices(data))
     },[]);
@@ -20,7 +21,7 @@ const Services = () => {
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
                 {
-                    services.map(service=><ServicesCard key={service._id} service={service} />)
+                    services.map(service=><ServicesCard key={service._id} service={service}/>)
                 }
             </div>
             <div className="card-actions justify-center">

@@ -11,7 +11,7 @@ const Orders = () => {
   useEffect(() => {
     //1 if there user lead data
     if (user) {
-      fetch(`https://web-developer-server-five.vercel.app/orders?email=${user.email}`, {
+      fetch(`http://localhost:5000/orders?email=${user.email}`, {
         headers: {
           authorization: `Bearer ${localStorage.getItem("car-token")}`,
         },
@@ -27,7 +27,7 @@ const Orders = () => {
 
     //2 user optional chair to laod data
 
-    // fetch(`https://web-developer-server-five.vercel.app/orders?email=${user?.email}`)
+    // fetch(`http://localhost:5000/orders?email=${user?.email}`)
     //     .then(res=>res.json())
     //     .then(data=>setOrders(data));
   }, [user]);
@@ -38,7 +38,7 @@ const Orders = () => {
     console.log(id);
     const proceed = window.confirm("Sure? Want to Erase?");
     if (proceed) {
-      fetch(`https://web-developer-server-five.vercel.app/orders/${id}`, {
+      fetch(`http://localhost:5000/orders/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())
@@ -55,7 +55,7 @@ const Orders = () => {
   };
 
   const handleStatusUpdate = (id) => {
-    fetch(`https://web-developer-server-five.vercel.app/orders/${id}`, {
+    fetch(`http://localhost:5000/orders/${id}`, {
       method: "PATCH",
       headers: {
         "content-type": "application/json",
