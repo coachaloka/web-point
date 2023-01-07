@@ -6,7 +6,7 @@ import AllServicesCard from "./AllServicesCard";
 const AllServices = () => {
   const [allServices, setAllServices] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/allservices")
+    fetch("https://webpoint-server2.vercel.app/allservices")
       .then((res) => res.json())
       .then((data) => setAllServices(data));
   }, []);
@@ -33,7 +33,7 @@ const AllServices = () => {
 // const AllServices = () => {
 //   const [allServices, setAllServices] = useState([]);
 //   useEffect(() => {
-//     fetch("http://localhost:5000/services")
+//     fetch("https://webpoint-server2.vercel.app/services")
 //       .then((res) => res.json())
 //       .then((data) => setAllServices(data));
 //   }, []);

@@ -40,7 +40,7 @@ const AddServices = () => {
     // }
 
         // create order in and save data base mongodb
-        fetch("http://localhost:5000/services", {
+        fetch("https://webpoint-server2.vercel.app/services", {
         method: "POST",
         headers: {
             "content-type": "application/json",

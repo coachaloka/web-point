@@ -8,7 +8,7 @@ const Services = () => {
     useTitle('Web Point')
     const [services, setServices]=useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/services')
+        fetch('https://webpoint-server2.vercel.app/services')
         .then(res=>res.json())
         .then(data=>setServices(data))
     },[]);

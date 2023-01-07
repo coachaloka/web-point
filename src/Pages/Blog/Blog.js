@@ -8,7 +8,7 @@ const Blog = () => {
   useTitle('Blog');
   const [blogs, setBlogs] = useState([])
   useEffect(()=>{
-    fetch('http://localhost:5000/blogs')
+    fetch('https://webpoint-server2.vercel.app/blogs')
     .then(res=>res.json())
     .then(data=>setBlogs(data))
   },[])

@@ -38,22 +38,22 @@ const router = createBrowserRouter([
                 element: <PrivateRoute>
                     <AddServices />
                 </PrivateRoute>,
-                loader: ()=>fetch('http://localhost:5000/services')
+                loader: ()=>fetch('https://webpoint-server2.vercel.app/services')
             },
             {
                 path: 'checkout/:id',
                 element: <PrivateRoute><Checkout /></PrivateRoute>,
-                loader: ({params})=>fetch(`http://localhost:5000/services/${params.id}`)
+                loader: ({params})=>fetch(`https://webpoint-server2.vercel.app/services/${params.id}`)
             },
             {
                 path: 'serviceDetails/:id',
                 element: <ServiceDetails />,
-                loader: ({params})=>fetch(`http://localhost:5000/services/${params.id}`)
+                loader: ({params})=>fetch(`https://webpoint-server2.vercel.app/services/${params.id}`)
             },
             {
                 path: 'allServices',
                 element: <AllServices />
-                // loader: ({params})=>fetch(`http://localhost:5000/services/${params.id}`)
+                // loader: ({params})=>fetch(`https://webpoint-server2.vercel.app/services/${params.id}`)
             },
             {
                 path: 'reviews',
@@ -62,7 +62,7 @@ const router = createBrowserRouter([
             {
                 path: 'blogs',
                 element:<Blog />
-                // loader: ()=>fetch('http://localhost:5000/blogs')
+                // loader: ()=>fetch('https://webpoint-server2.vercel.app/blogs')
             }
         ]
     },
